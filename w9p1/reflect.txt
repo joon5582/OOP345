@@ -1,0 +1,17 @@
+/*
+    ==================================================
+    Workshop #9 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+1. As we encode each charactor with Key value by using ^(XOR) operator, The encoded results can be non-ascii code char.
+And that can't be properly displayed as text file. That's why we use binary format at this time.
+
+2. By binding function to arguments, we simply put the created function pointer into the argument of thread.
+
+3. By using thread library, I used 4 threads to encode single file. This makes it possible to process the encoding at the same time in multi-core cpu.
+And this really saves much time compared to non-multiple thread program. 

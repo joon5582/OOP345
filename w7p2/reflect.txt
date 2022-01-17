@@ -1,0 +1,30 @@
+/*
+    ==================================================
+    Workshop #7 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+
+1.
+I used for_each STL function for display(). Because we have to iterate all elements of the collection.
+And I wanted to use for_each for cleanAlbum as well but because of the restriction, I used replace_if instead.
+Also, I used any_of for inCollection. It fits well for that function and copy_if for getSongsForArtist as well.
+
+2.
+The advantages are huge. We don't have to implement any detail. By just putting some argument and lambda expression, we can do what all we want.
+
+3. 
+Below is the code for the sorting. As we can see, I already implemented that if client put invalid field, it sorts the collection by using title as default.
+I did it because title is just the first column.
+
+std::sort(m_songs.begin(), m_songs.end(), [&field](const Song& song1, const Song& song2)
+			{
+				if (field == "album") return song1.m_album < song2.m_album;
+				else if (field == "length") return song1.m_length < song2.m_length;
+				else return song1.m_title < song2.m_title;
+			}
+		);

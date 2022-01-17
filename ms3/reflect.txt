@@ -1,0 +1,13 @@
+/*
+    ==================================================
+    MS3 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+This was by far the highest difficulty coding challenge. But I really enjoyed and learned much things thorugh it.
+As instruction is not that kind, I could interpret from thinking actual mechanism of assembly line and given output.
+I hope this helps me much for doing other programming tasks.

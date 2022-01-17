@@ -1,0 +1,86 @@
+Script started on Fri 10 Sep 2021 04:05:02 PM EDT
+==160578== Memcheck, a memory error detector
+==160578== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==160578== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==160578== Command: ws monday.txt tuesday.txt wednesday.txt thursday.txt friday.txt saturday.txt sunday.txt
+==160578== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: monday.txt
+  3: tuesday.txt
+  4: wednesday.txt
+  5: thursday.txt
+  6: friday.txt
+  7: saturday.txt
+  8: sunday.txt
+--------------------------
+
+--------------------
+    Day 1
+--------------------
+ 1. 00:02:55 => Computer starts
+ 2. 00:02:55 => Computer starts
+ 3. | No Event |
+ 4. 01:15:34 => User logs in
+ 5. 01:20:09 => User logs in
+ 6. 09:01:04 => Browser closed
+ 7. 17:33:33 => User checks email
+--------------------
+    Day 2
+--------------------
+ 8. 01:02:23 => User starts working on homework
+ 9. | No Event |
+10. 01:20:34 => User takes a break
+11. 01:22:30 => User plays Sudoku
+12. 01:26:40 => User resumes homework
+--------------------
+    Day 3
+--------------------
+Cannot open file [wednesday.txt]. Ignoring it!
+--------------------
+    Day 4
+--------------------
+Cannot open file [thursday.txt]. Ignoring it!
+--------------------
+    Day 5
+--------------------
+Cannot open file [friday.txt]. Ignoring it!
+--------------------
+    Day 6
+--------------------
+Cannot open file [saturday.txt]. Ignoring it!
+--------------------
+    Day 7
+--------------------
+Cannot open file [sunday.txt]. Ignoring it!
+--------------------
+    Archive
+--------------------
+13. | No Event |
+14. 01:20:00 => Authentication failed
+15. 01:23:20 => Browser starts
+16. 09:01:04 => Browser closed
+17. 17:33:33 => User checks email
+18. 01:02:23 => User starts working on homework
+19. 01:22:30 => User plays Sudoku
+20. | No Event |
+21. 01:26:40 => User resumes homework
+--------------------
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==160578== 
+==160578== HEAP SUMMARY:
+==160578==     in use at exit: 0 bytes in 0 blocks
+==160578==   total heap usage: 10 allocs, 10 frees, 93,064 bytes allocated
+==160578== 
+==160578== All heap blocks were freed -- no leaks are possible
+==160578== 
+==160578== For lists of detected and suppressed errors, rerun with: -s
+==160578== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Fri 10 Sep 2021 04:05:03 PM EDT

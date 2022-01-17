@@ -1,0 +1,28 @@
+/*
+    ==================================================
+    Workshop #5 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+1.
+In functor, we use the name of the class as if it's function name. Therefore, I think functor can be usefully used as utility function.
+On the other hand, the function implemented by lamda expression can be stored in variable. So it's useful when the function itself should be passed to parameter.
+
+2.
+Instead of throwing exception in the constructor of SpellChecker, we can print the same error message at standard error console std::cerr in the constructor.
+But in this case, we can't use try-catch statement in client side. Therefore, if we are to do some other thing additional to printing error message, it's impossible for this case.
+
+3.
+I may design 'Contents' parent class and make both Movie and Book to become its child. 
+So we can implement all identical member and functions in the parent class and only different attributes are implemented in each child class.
+
+4.
+We can't remove either of the default constructor. Because the main module instantiates it with empty argument and if there is no default constructor, program can't decide the default empty state.
+So I implemented them but the body of both are just empty.
+
+5. 
+In SpellChecker, implementing replace_all function was so hard for me. But using string::find() and string::replace(), I managed to make it.

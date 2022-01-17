@@ -1,0 +1,14 @@
+In line number 240 of your output:
+The output should be:
+There are no confirmations to send!
+  ^
+But your output is: 
+This restaurant is empty!
+  ^
+
+Unmatched character details:
+The character in column 3 is supposed to be:
+  [e] ASCII code(101)
+but you printed
+  [i] ASCII code(105)
+

@@ -1,0 +1,14 @@
+In line number 40 of your output:
+The output should be:
+|                                                        Total Listening Time: 1:17:23 |
+                                                         ^
+But your output is: 
+|                                                         Total Listening Time: 1:17:23|
+                                                         ^
+
+Unmatched character details:
+The character in column 58 is supposed to be:
+  [T] ASCII code(84)
+but you printed
+  [Space] ASCII code(32)
+

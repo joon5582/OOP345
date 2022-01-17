@@ -1,0 +1,14 @@
+In line number 118 of your output:
+The output should be:
+    Filled Cornel B., 1-Room Home Office [Office Chair]
+^
+But your output is: 
+Line Manager Iteration: 5
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [Space] ASCII code(32)
+but you printed
+  [L] ASCII code(76)
+

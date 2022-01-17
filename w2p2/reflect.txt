@@ -1,0 +1,21 @@
+/*
+    ==================================================
+    Workshop #2 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+There is significant time difference between the copy and move operations.
+There are many reasons for this. For example,
+
+for (size_t i = 0; i < m_numOfstring; i++)
+{
+	m_stringArray[i] = other.m_stringArray[i];
+}
+
+This for loop is inside of copy assignment function. So it takes O(n) time depends on the size of the array.
+But in move operation, the memory address of source array is just taken by destination array. Therefore, it takes O(1) time.
+It took a lot of time to understand the contents of the chrono module. However, after understanding, the code was concise and was able to implement the desired function simply.

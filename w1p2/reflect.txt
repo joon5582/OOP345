@@ -1,0 +1,20 @@
+/*
+    ==================================================
+    Workshop #1 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+
+External linkage can be used when we want to use a global variable defined at other translation unit.
+For example, unsigned int g_sysClock = 0; this code line is definition of global variable g_sysClock in event.cpp of my program.
+And extern unsigned int g_sysClock; This code is external declaration in w1_p2.cpp that we're going to use the global variable in this translation unit.
+Internal linkage means that if a variable is to act like global variable but can't be accesible by other translation unit.
+For example, I defined static int counter = 0; at member function display() of event.cpp. So it remains in memory during whole running time of the program
+but only accessible by event.cpp translator unit. Therefore, whenever the display() is called, It increases the counter and we can record the number of how many display() is called.
+I upgraded by Event class by using the rule of 3. Because we should accept any length of description cstring, so I had to use DMA. 
+
+

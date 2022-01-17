@@ -1,0 +1,87 @@
+Script started on Sun 26 Sep 2021 12:24:29 PM EDT
+==74090== Memcheck, a memory error detector
+==74090== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==74090== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==74090== Command: ws gutenberg_shakespeare
+==74090== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: gutenberg_shakespeare
+--------------------------
+
+  0-arg Constructor - a.size =       0 strings ->  (a) String     1: []
+                                                   (a) String   100: []
+                                                   (a) String  1000: []
+                                                   (a) String  last: []
+                                                   (a) String last+: []
+
+  1-arg Constructor - b.size = 1293934 strings ->  (b) String     1: [This]
+                                                   (b) String   100: [OR]
+                                                   (b) String  1000: [provide]
+                                                   (b) String  last: [Shakespeare]
+                                                   (b) String last+: []
+
+  Copy Constructor  - c.size = 1293934 strings ->  (c) String     1: [This]
+                                                   (c) String   100: [OR]
+                                                   (c) String  1000: [provide]
+                                                   (c) String  last: [Shakespeare]
+                                                   (c) String last+: []
+
+  Copy Assignment   - a.size = 1293934 strings ->  (a) String     1: [This]
+                                                   (a) String   100: [OR]
+                                                   (a) String  1000: [provide]
+                                                   (a) String  last: [Shakespeare]
+                                                   (a) String last+: []
+
+  Move Constructor  - d.size = 1293934 strings ->  (a) String     1: []
+                                                   (a) String   100: []
+                                                   (a) String  1000: []
+                                                   (a) String  last: []
+                                                   (a) String last+: []
+
+                                                   (d) String     1: [This]
+                                                   (d) String   100: [OR]
+                                                   (d) String  1000: [provide]
+                                                   (d) String  last: [Shakespeare]
+                                                   (d) String last+: []
+
+  Move Assignment   - a.size = 1293934 strings ->  (a) String     1: [This]
+                                                   (a) String   100: [OR]
+                                                   (a) String  1000: [provide]
+                                                   (a) String  last: [Shakespeare]
+                                                   (a) String last+: []
+
+                                                   (d) String     1: []
+                                                   (d) String   100: []
+                                                   (d) String  1000: []
+                                                   (d) String  last: []
+                                                   (d) String last+: []
+--------------------------
+Execution Times:
+--------------------------
+  0-arg Constructor         688993 nanoseconds
+  1-arg Constructor     6380442812 nanoseconds
+  Copy Constructor      2545787288 nanoseconds
+  Copy Assignment       2997773312 nanoseconds
+  Move Constructor         1197888 nanoseconds
+  Move Assignment           500995 nanoseconds
+  Destructor            3088765811 nanoseconds
+--------------------------
+
+[38;5;9m------------------------
+End Testing the Program![0m
+==74090== 
+==74090== HEAP SUMMARY:
+==74090==     in use at exit: 0 bytes in 0 blocks
+==74090==   total heap usage: 6,035 allocs, 6,035 frees, 124,486,357 bytes allocated
+==74090== 
+==74090== All heap blocks were freed -- no leaks are possible
+==74090== 
+==74090== For lists of detected and suppressed errors, rerun with: -s
+==74090== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Sun 26 Sep 2021 12:24:45 PM EDT

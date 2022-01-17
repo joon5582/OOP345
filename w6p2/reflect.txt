@@ -1,0 +1,19 @@
+/*
+    ==================================================
+    Workshop #6 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+1. Although all elements of vector will be deleted naturally when its lifetime ends, in this case, the elements are all pointer and they're pointing dynamically allocated values.
+So we should manually remove those pointed values from memory.
+
+2. In Utilities.cpp, if type char of each record is not matched to the given condition, we assume it as wrong type and can throw exception.
+And I think this way is just fine.
+
+3. Yes we can just use std::list<sdds::Vehicle> and std::vector<sdds::Vehicle> instead. But if we implement this way, then whenever we return or assign those Vehicle instance,
+it should copy or write whole Vehicle data again. So it's very inefficient compared to just managing addresses. 
+

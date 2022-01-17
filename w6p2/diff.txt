@@ -1,0 +1,14 @@
+In line number 55 of your output:
+The output should be:
+|      Honda | broken | 145.00 |
+^
+But your output is: 
+--------------------------------
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [|] ASCII code(124)
+but you printed
+  [-] ASCII code(45)
+

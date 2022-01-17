@@ -1,0 +1,14 @@
+/*
+    ==================================================
+    Workshop #4 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+I think the relationship between Restaurant and Reservations in our workshop is aggregation because it does not manage the creation or destruction of the Reservations, and between ConfirmationSender and Reservations is association.
+Because officially Reservations are belong to single Restaurant, and Restaurant module has the copy of reservations. But in ConfirmationSender, it just having the address of each Reservations as const.
+So it can't modify the values. It means it has weaker binding than Restaurant. But I think distinguishing the relationship whether composition or aggregation or association is meaningless. Because I can implement exactly same code without using those words.
+If someone tell me the profit of distinguishing them reasonably, I'll take it as important thing.

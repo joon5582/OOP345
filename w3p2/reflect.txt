@@ -1,0 +1,47 @@
+/*
+    ==================================================
+    Workshop #3 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+1. The compiler redefines functions or classes implemented as templates one by one for each actually used data type.
+However, if the declaration and definition of this template are separated, the compiler will not be able to figure out the data type.
+That's why we should declare and define the template function at the same place in header file.
+
+
+2. Specialization of +=operation is required because, unlike other variable types, strings should be concatenated, not a simple sum operation.
+But we don't need any specialization for static initial value of PairSummable. Because for any type of V, we can initialize it by using {}.
+Therefore, V is initialized to an appropriate initial value according to the type of V.
+
+template<typename V, typename K>
+V PairSummable<V, K>::initialValue{};
+
+Above is my code for initialization of V static variable.
+And let's look at this code.
+
+PairSummable(const K& key, const V& value = initialValue) : Pair<V, K>(key, value) 
+
+If we are not to explicitly pass the second argument, this constructor uses default initial value and pass it to its parent class Pair.
+This functionality is used in below accumulate function of SetSummable.h.
+
+T accumulate(const std::string& filter) const {
+	T result{ filter };
+	for (size_t i = 0; i < sdds::Set<N, T>::size(); i++) {
+		if (sdds::Set<N, T>::get(i).isCompatibleWith(result))
+			result += sdds::Set<N, T>::get(i);
+	}
+	return result;
+}
+
+First I declared 'result' variable of type T. And then accumulate all value of each T that matches its key to the filter key.
+So when accumulating, the initial value of result should be 'empty'. That's why it should be initialized to default empty value according to its type.
+
+
+3. class variable(static variable) is shared by all instances of one class. 
+If the value is initialized within class definition, it becomes a value that cannot be shared because the value would be newly initialized every time an instance is created.
+Therefore, by initializing outside the class definition, it is initialized only once after the program starts.
+

@@ -1,0 +1,14 @@
+In line number 198 of your output:
+The output should be:
+Reservation    RES-004:                  Ana  <ana@email.com>         Breakfast on day 5 @ 8:00 for 1 person.
+^
+But your output is: 
+==226166== Invalid read of size 8
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [R] ASCII code(82)
+but you printed
+  [=] ASCII code(61)
+

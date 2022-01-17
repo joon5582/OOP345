@@ -1,0 +1,14 @@
+In line number 43 of your output:
+The output should be:
+getNextSerialNumber(): 123457
+                            ^
+But your output is: 
+getNextSerialNumber(): 123456
+                            ^
+
+Unmatched character details:
+The character in column 29 is supposed to be:
+  [7] ASCII code(55)
+but you printed
+  [6] ASCII code(54)
+

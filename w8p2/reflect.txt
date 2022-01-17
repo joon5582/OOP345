@@ -1,0 +1,26 @@
+/*
+    ==================================================
+    Workshop #8 (reflect):
+    ==================================================
+    Name   : Junwoo Lee
+    ID     : 124395203
+    Email  : jlee648@myseneca.ca
+    Section: NDD
+*/
+
+Below is my partial code of implementing mergeRaw. For this function, after adding object to priceList, I had to delete obsolete original object because it is dynamically allocated.
+
+rP = new Product(desc[i].desc, price[j].price);
+rP->validate();
+priceList += rP;
+delete rP;
+
+However, by using unique smart pointer like below, I don't have to delete. Because when the lifetime of unique smart pointer ends, it automatically deletes its object as well.
+So it's very useful for managing memories.
+
+sP = make_unique<Product>(desc[i].desc, price[j].price);
+sP->validate();
+priceList += move(sP);
+
+
+ 
